@@ -29,6 +29,7 @@ Route::group(['prefix' => 'contact','middleware' => 'auth'], function(){
     Route::get('show/{id}', 'App\Http\Controllers\ContactFormController@show')->name('contact.show');
     Route::get('edit/{id}', 'App\Http\Controllers\ContactFormController@edit')->name('contact.edit');
     Route::post('update/{id}', 'App\Http\Controllers\ContactFormController@update')->name('contact.update');
+    Route::post('destroy/{id}', 'App\Http\Controllers\ContactFormController@destroy')->name('contact.destroy');
     //idを指定しているのがstoreとの違い
 });
 //contactフォルダーに指定
