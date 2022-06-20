@@ -26,12 +26,15 @@ class ContactFormController extends Controller
         //クエリビルダ
         $contacts = DB::table('contact_forms')
         ->select('id','your_name','title','created_at')
-        ->get();
+        ->orderby('created_at','asc')
+        ->paginate(1);
         
         //dd($contacts);
 
         return view('contact.index', compact('contacts'));//folder名.file名
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
