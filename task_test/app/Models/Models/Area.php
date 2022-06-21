@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Area extends Model
 {
-    use HasFactory;
+    public function shops(){
+        return $this->hasmany('App\Models\Models\Shop');
+        //子テーブルと繋ぐ
+    }
 }
