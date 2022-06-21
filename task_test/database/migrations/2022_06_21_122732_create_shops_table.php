@@ -16,9 +16,11 @@ return new class extends Migration
         Schema::create('shops', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('shop_name',20);
-            $table->unsignedBigInteger('area_id');
+            $table->unsignedBigInteger('area_id');//FK
             //shopの名前とareaを紐づける
             $table->timestamps();
+
+            $table->foreign('area_id')->references('id')->on('areas');
         });
     }
 
