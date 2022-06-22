@@ -1,4 +1,0 @@
-AuthType Basic
-Authname "IDとパスワードを入力してください。"
-AuthUserFile C:\xampp\htdocs\php_test\mainte\.htpasswd
-require valid-user 
